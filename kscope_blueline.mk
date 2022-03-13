@@ -4,23 +4,22 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Inherit some common Kscope stuff.
+$(call inherit-product, vendor/kscope/config/mobile.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
 
--include device/google/crosshatch/device-arrow.mk
+-include device/google/crosshatch/device-kscope.mk
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := arrow_blueline
+PRODUCT_NAME := kscope_blueline
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 3
 TARGET_MANUFACTURER := Google
-
-# ArrowOS additions
-DEVICE_MAINTAINER := ReallySnow
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=blueline \
