@@ -8,7 +8,7 @@
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit some common Kscope stuff.
-$(call inherit-product, vendor/kscope/config/mobile.mk)
+$(call inherit-product, vendor/kscope/target/product/mobile.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
